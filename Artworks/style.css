@@ -1,0 +1,34 @@
+
+.dropdown-menu {
+  margin-top: 20px;
+}
+
+.pin-code {
+  margin-top: 10px;
+  width: 150px;
+  padding: 5px;
+}
+
+.rectangular-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+.quantity {
+  font-size: 20px;
+}
+
+.container007{ 
+ 
+  width: 5px;
+  
+}

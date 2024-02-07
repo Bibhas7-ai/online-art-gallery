@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="virtualExhibition.css">
+    <script src="https://kit.fontawesome.com/98d2dd6dda.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="bars">
+        <div class="logos">
+            <a href="homePageArtists.php" >
+            <img src="https://i.ibb.co/64cLbJL/Group-3.png" alt="Art Gallery Logo"></a>
+        
+            <div class="rectangless"></div>
+            <p class="Text">Abstract</p>
+            <a href="virtualExhibitionTimeArtists.php" class="cross-icon">
+                <i class="fa-solid fa-xmark" style="font-size: 60px; margin-top: 10px; "></i>
+            </a>
+        </div>
+    </div>
+    <div class="slideshow-wrapper">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://ik.imagekit.io/theartling/prod/original_images/62.jpg?tr=w-825,h-600,c-at_max,bg-FFFFFF" alt="Slide 1">
+                <div class="text">Wassily Kandinsky, Composition X, 1939</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="https://www.tallengestore.com/cdn/shop/collections/Abstract-Painting-of-Peoples-in-Club.jpg?v=1443419597" alt="Slide 2">
+                <div class="text">Joseph Catanzaro, Cocktail Hour</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnvrQFk3MsChJmpmvutHXZr2ct9m9tYRsvLA&usqp=CAU" alt="Slide 3">
+                <div class="text">Thomas C. Fedro, Mrs. Brightside</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="https://www.virtosuart.com/images/2019/blog-new/FAA_starrry_night.jpg" alt="Slide 4">
+                <div class="text">Vincent Van Gogh, The Starry Night</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="https://www.virtosuart.com/images/2015/paint/C-1-2015-034-Che-Guevara.JPG" alt="Slide 5">
+                <div class="text">Gheorghe Virtosu, Che Guevara, 2015</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="https://www.virtosuart.com/images/1old/DSC09888-Copy.jpg" alt="Slide 6">
+                <div class="text">Gheorghe Virtosu, Behind Human Mask, 2017</div>
+            </div>
+
+            <a class="arrows left-arrow" onclick="plusSlides(-1)">
+                <i class="fa-solid fa-circle-arrow-left" style="color: #593255;"></i>
+            </a>
+            <a class="arrows right-arrow" onclick="plusSlides(1)">
+                <i class="fa-solid fa-circle-arrow-right" style="color: #593255;"></i>
+            </a>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+        </div>
+    </div>
+            
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>

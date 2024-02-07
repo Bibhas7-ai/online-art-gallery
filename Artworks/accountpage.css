@@ -1,0 +1,218 @@
+*{
+    font-family: Poppins;
+}
+body {
+    /* background-color:#EFF5F5; */
+    margin: 0;
+    padding: 0;
+}
+.background-container {
+    background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1203&q=80');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bar {
+    background-color: #593255;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    border-bottom: 1px solid #497174; 
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+    height:80px;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+}
+.account-page {
+    width: 90%;
+    max-width: 300px; 
+    background-color:#FFFF;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.form-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-btn span {
+    flex: 1;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center; 
+}
+
+.btn {
+    width: 100%; 
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color:  #593255;
+    color: rgb(249, 245, 235);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn:hover{
+    background-color:rgb(249, 245, 235);
+    color:#593255;
+    border: 2px solid #593255;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select,
+form button[type="submit"] {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #497174;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #593255;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    transition: transform 1s;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.form-btn span:nth-child(1) {
+    margin-right: 20px; 
+}
+.option p {
+    color: #497174;
+    margin-top: 20px;
+}
+
+#Indicator {
+    width: 110px;
+    height: 3px;
+    background-color: #593255;
+    position: absolute;
+    top: 25px; 
+    left: 0;
+    transition: transform 0.6s;
+}
+
+
+.option {
+    text-align: center;
+    font-size: 14px;
+    color: #497174;
+    margin-top: 16px;
+   
+}
+
+.option a,
+.option span {
+    color: #593255;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+form button[type="submit"] {
+    background-color:#593255 ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color:rgb(249, 245, 235);
+    color:#593255;
+    border: 2px solid #593255;
+}
+
+
+form {
+    display: none;
+}
+
+form.active {
+    display: block;
+}
+
+.logos {
+    display: flex; 
+    align-items: center; 
+}
+.logos img {
+    width: 60px; 
+    height: auto;  
+}
+
+.rectangless {
+    width: 3px;
+    height: 50px; 
+    background-color: rgb(249, 245, 235);
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.Text{
+    font-size: 28px;
+    color: rgb(249, 245, 235);
+    right: 600px;
+}
+/* For small screens (up to 600px) */
+@media (max-width: 600px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .account-page {
+        width: 100%;
+    }
+}
+
+/* For medium screens (between 600px and 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-container {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* For large screens (1025px and above) */
+@media (min-width: 1025px) {
+    .main-container {
+        justify-content: center;
+        align-items: center;
+    }
+}

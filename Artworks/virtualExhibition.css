@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Slideshow container */
+.slideshow-container {
+   
+    position: relative;
+    margin: auto;
+    
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 20px; /* Increase the right position to create horizontal spacing */
+    border-radius: 3px 0 0 3px;
+}
+
+.text {
+    color: #593255;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: relative; /* Change position to relative */
+    top: 0; /* Adjust the top value as needed to move the text below the image */
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #593255;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #82557d;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {font-size: 11px}
+}
+
+/* Container for the slideshow and navigation elements */
+.slideshow-wrapper {
+    position: relative;
+    width: 98.6%;
+    height: 70vh; /* Adjust the height to create space at the top */
+    margin: auto;
+    text-align: center;
+    margin-top: 50px; /* Increase the margin-top to shift it further down */
+}
+
+
+
+    /* Bar above the images */
+    .bar {
+        background-color: #593255;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px; /* Add margin at the top of the bar */
+        
+    }
+
+.logos {
+     display: flex;
+ align-items: center;
+  margin-left:10px;
+
+ }
+.bars img{
+    width:60px;
+    height: auto;
+}
+ .rectangless {
+    width: 3px;
+    height: 50px; 
+    background-color: #593255;
+    margin: 0 10px; 
+    border-radius: 10px;
+}
+.Text{
+    font-size: 30px;
+    color: #593255;
+    font-weight: bold;
+  
+}
+/* Left and Right arrow position */
+.arrows {
+    position: absolute;
+    font-size: 60px;
+    cursor: pointer;
+    user-select: none;
+    top: 50%; /* Align both arrows vertically */
+    transform: translateY(-50%);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 20px; /* Increase the right position to create horizontal spacing */
+}
+
+
+
+
+/* Bottom dots position */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Set all images in the slideshow to a fixed height */
+.mySlides img {
+    height: 400px;
+    object-fit:contain;
+    width: 100%;
+}
+
+.cross-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 5px;
+    color: #593255;
+    margin-right: 20px;
+    top: 10px; /* Adjust the top position to move it down slightly */
+    
+}
